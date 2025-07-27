@@ -21,10 +21,8 @@ sudo chown "$FTP_UID":"$FTP_GID" "$FTP_DATA_DIR/uploads"
 sudo chmod 755 "$FTP_DATA_DIR/uploads"
 
 docker run -d \
-    --name "$IMG_NAME" \
-    -p 20:20 \
-       -p 21:21 \
-        -p 30000-30100:30000-30100 \
-          -v "$FTP_DATA_DIR":/srv/vsftp/root/public \
-               --restart unless-stopped \
-                   "$IMG_NAME"
+	--network host \
+	 --name "$IMG_NAME" \
+	   -v "$FTP_DATA_DIR":/srv/vsftp/root/public \
+             --restart unless-stopped \
+                "$IMG_NAME"
