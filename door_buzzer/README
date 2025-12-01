@@ -1,0 +1,16 @@
+
+
+            +5V
+             |
+             |
+        [Arduino Nano]
+      +----------------+
+      |                |
+      |          A3  ---+---+-----> Reed Switch -----> GND
+      |                |   |
+      |                |   +---> INPUT_PULLUP enabled
+      |                |
+      |          D3  ---+-----> Buzzer -----> GND
+      |                |
+      |        LED_BUILTIN (onboard LED)
+      +----------------+
