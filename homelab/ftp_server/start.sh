@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-FTP_DATA_DIR="$(pwd)/ftpdata"
+FTP_DATA_DIR="/srv/ftp/keepass"
 IMG_NAME="anon-lan-ftp"
 
 mkdir -p "$FTP_DATA_DIR"/uploads
