@@ -6,12 +6,12 @@ services:
     container_name: filebrowser-app
     restart: unless-stopped
     ports:
-      - "8080:80"      # Access via http://<server-ip>:8080
+      - "8080:80"
     volumes:
-      - /srv/cloud/files:/srv   # This is where all your files will live
-      - /srv/cloud/filebrowser.db:/database.db   # User database
+      - /srv/cloud/files:/srv
+      - /srv/cloud/filebrowser.db:/database.db
     environment:
-      PUID: 1000          # Your user ID on the host
-      PGID: 1000          # Your group ID on the host
-      FB_AUTH_METHOD: json # Use internal FileBrowser user DB
+      PUID: 1000
+      PGID: 1000
+      FB_AUTH_METHOD: json
 
