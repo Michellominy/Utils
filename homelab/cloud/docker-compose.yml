@@ -13,5 +13,4 @@ services:
     environment:
       PUID: 1000
       PGID: 1000
-      FB_AUTH_METHOD: json
-
+      FB_NOAUTH: "true"
